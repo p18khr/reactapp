@@ -13,8 +13,9 @@ export default function Home() {
     <div>
       <div className="my-5">
         <div className="card cardHome">
-          <img src={logo} alt="" />
-
+          <div>
+            <img className="card-img-top img-fluid" src={logo} alt="" />
+          </div>
           <div className="card-img-overlay">
             <div className="card-body">
               <Row>
@@ -63,7 +64,9 @@ export default function Home() {
                   <Form></Form>
                 </Col>
               </Row>
-              <div className="moving-text" style={{ fontSize: "20px" }}>Sample text</div>
+              <div className="moving-text" style={{ fontSize: "20px" }}>
+                Sample text
+              </div>
             </div>
           </div>
         </div>
@@ -80,7 +83,9 @@ export default function Home() {
           >
             Explore the National Parks
           </tr>
-          <tr><CarouselFade></CarouselFade></tr>
+          <tr>
+            <CarouselFade></CarouselFade>
+          </tr>
         </tbody>
       </table>
       <table className="container my-5">
@@ -91,8 +96,12 @@ export default function Home() {
               fontWeight: "bold",
               fontSize: "25px",
             }}
-          >Witness the Majestic Animals</tr>
-          <tr><CarousalAnimals></CarousalAnimals></tr>
+          >
+            Witness the Majestic Animals
+          </tr>
+          <tr>
+            <CarousalAnimals></CarousalAnimals>
+          </tr>
         </tbody>
       </table>
       <table className="container my-5">
@@ -103,8 +112,12 @@ export default function Home() {
               fontWeight: "bold",
               fontSize: "25px",
             }}
-          >Enjoy your way with number of activities</tr>
-          <tr><CarouselActivity></CarouselActivity></tr>
+          >
+            Enjoy your way with number of activities
+          </tr>
+          <tr>
+            <CarouselActivity></CarouselActivity>
+          </tr>
         </tbody>
       </table>
     </div>

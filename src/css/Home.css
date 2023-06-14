@@ -16,13 +16,14 @@ img{
     width: 100%;
     max-width: 100%;
     max-height: 3%;
-    height: 700px;
+    height: 800px;
     background-size: cover;
     overflow-y: auto !important;
     overflow: hidden;
     position: relative;
-    background-color: green;
+    background-color: darkgreen;
 }
+
 
 /* Makes the animation pause on hover */
 .moving-text:hover{

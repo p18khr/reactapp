@@ -27,9 +27,9 @@ export default function CarouselFade() {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="/park" className="btn btn-primary">
+                {/* <a href="/park" className="btn btn-primary">
                   Go somewhere
-                </a>
+                </a> */}
               </div>
               <div className="card-footer text-muted">2 days ago</div>
             </div>
@@ -49,9 +49,9 @@ export default function CarouselFade() {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="/park" className="btn btn-primary">
+                {/* <a href="/park" className="btn btn-primary">
                   Go somewhere
-                </a>
+                </a> */}
               </div>
               <div className="card-footer text-muted">2 days ago</div>
             </div>
@@ -71,9 +71,9 @@ export default function CarouselFade() {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="/park" className="btn btn-primary">
+                {/* <a href="/park" className="btn btn-primary">
                   Go somewhere
-                </a>
+                </a> */}
               </div>
               <div className="card-footer text-muted">Place</div>
             </div>
@@ -117,9 +117,9 @@ export default function CarouselFade() {
                 With supporting text below as a natural lead-in to additional
                 content.
               </p>
-              <a href="/park" className="btn btn-primary">
+              {/* <a href="/park" className="btn btn-primary">
                 Go somewhere
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -132,9 +132,9 @@ export default function CarouselFade() {
                 With supporting text below as a natural lead-in to additional
                 content.
               </p>
-              <a href="/park" className="btn btn-primary">
+              {/* <a href="/park" className="btn btn-primary">
                 Go somewhere
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -147,9 +147,9 @@ export default function CarouselFade() {
                 With supporting text below as a natural lead-in to additional
                 content.
               </p>
-              <a href="/park" className="btn btn-primary">
+              {/* <a href="/park" className="btn btn-primary">
                 Go somewhere
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -162,9 +162,9 @@ export default function CarouselFade() {
                 With supporting text below as a natural lead-in to additional
                 content.
               </p>
-              <a href="/park" className="btn btn-primary">
+              {/* <a href="/park" className="btn btn-primary">
                 Go somewhere
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

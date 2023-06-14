@@ -3,7 +3,7 @@ import "../css/Intro.css";
 
 export default function Intro() {
   return (
-    <div className="container">
+    <div className="container my-3">
       <div className="card cardIntro">
         <div className="card-body">
           <div

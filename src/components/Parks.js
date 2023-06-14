@@ -3,8 +3,15 @@ import logo from "../images/safari.jpg";
 import CardsPark from "./CardsPark";
 import "../css/Parks.css";
 import Filter from "./Filter";
+import { useSelector } from "react-redux";
 
 export default function Parks() {
+
+  const stateName = useSelector(state => state.stateName);
+  const parkName = useSelector(state => state.parkName);
+  const cityName = useSelector(state => state.cityName);
+  const activityName = useSelector(state => state.activityName);
+
   return (
     <div>
       <div className="my-2">
@@ -14,7 +21,7 @@ export default function Parks() {
           <div className="card-img-overlay">
             <div className="card-body my-5">
               <div className="d-none d-lg-block">
-                <Filter></Filter>
+                <Filter stateName={stateName} City={cityName} park={parkName} activity={activityName}></Filter>
               </div>
               <button
                 type="button"
@@ -27,7 +34,7 @@ export default function Parks() {
               <div
                 className="modal fade"
                 id="exampleModal"
-                tabindex="-1"
+                tabIndex="-1"
                 role="dialog"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
@@ -48,7 +55,7 @@ export default function Parks() {
                       </button>
                     </div>
                     <div className="modal-body">
-                      <Filter></Filter>
+                      <Filter stateName={stateName} City={cityName} park={parkName} activity={activityName}></Filter>
                     </div>
                     <div className="modal-footer">
                       <button
