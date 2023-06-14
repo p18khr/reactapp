@@ -1,0 +1,43 @@
+.card-image-overlay{
+    height: 800px; /* play around with this number until you get the height you need */
+    width: auto;
+    max-width: 100%;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+}
+
+img{
+    height: 100%;
+}
+
+.cardHome{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    max-height: 3%;
+    height: 700px;
+    background-size: cover;
+    overflow-y: auto !important;
+    overflow: hidden;
+    position: relative;
+    background-color: green;
+}
+
+/* Makes the animation pause on hover */
+.moving-text:hover{
+    animation-play-state: paused;
+}
+
+/* The animation */
+@keyframes marquee{
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(-100%);}
+}
+
+/* media query to enable animation for only those who want it */
+@media (prefers-reduced-motion: no-preference) {
+    .moving-text{
+        animation: marquee 15s linear infinite;
+    }
+}

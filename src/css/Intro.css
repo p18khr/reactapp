@@ -1,0 +1,11 @@
+.cardIntro{
+    background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.container{
+    text-align: justify;
+}
+.text{
+    color: white;
+}
