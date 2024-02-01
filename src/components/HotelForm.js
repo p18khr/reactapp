@@ -95,10 +95,80 @@ export default function HotelForm() {
   return (
     <div>
       <Cart price={hotel.price}></Cart>
-      <Alert message={alert.msg} hidden={alert.value} type={alert.type}></Alert>
+      <div className="container border">
+      <div className="img-overlay">
+                <div className="card-title body" style={{ fontSize: "40px",textAlign:'center',color:'yellow' }}>
+                  {hotel.name}
+                </div>
+              </div>
+      <div
+                id="carouselExampleControls"
+                className="carousel slide"
+                data-ride="carousel"
+              >
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <img className="d-block w-100" src={hotel.image1} alt="First slide" style={{height:'500px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={hotel.image2} alt="Second slide" style={{height:'500px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={hotel.image3} alt="Third slide" style={{height:'500px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={hotel.image4} alt="Fourth slide" style={{height:'500px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={hotel.image5} alt="Fifth slide" style={{height:'500px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={hotel.image6} alt="Sixth slide" style={{height:'500px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={hotel.image7} alt="Seventh slide" style={{height:'500px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={hotel.image8} alt="Eighth slide" style={{height:'500px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={hotel.image9} alt="Ninth slide" style={{height:'500px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={hotel.image10} alt="Tenth slide" style={{height:'500px',width:'150px'}} />
+                  </div>
+                </div>
+                <a
+                  className="carousel-control-prev"
+                  href="#carouselExampleControls"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    className="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="sr-only">Previous</span>
+                </a>
+                <a
+                  className="carousel-control-next"
+                  href="#carouselExampleControls"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    className="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="sr-only">Next</span>
+                </a>
+              </div>
+              
+      </div>
       <div className="container border form my-5">
+      <Alert message={alert.msg} hidden={alert.value} type={alert.type}></Alert>
       <div className="text-center my-3" style={{ fontWeight: "bold" }}>
-          {hotel.name}
+          Enquiry Form
         </div>
         <form className="mx-3 my-5">
           <div className="form-row">

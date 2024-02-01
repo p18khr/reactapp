@@ -1,78 +1,24 @@
-import React from "react";
-import Select from "react-select";
+import React, { useContext, useEffect } from "react";
+import { Carousel } from "react-bootstrap";
+import AppContext from "../contexts/AppContext";
 
 export default function ParksDash() {
-  const Options = [
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
-    { value: "vanilla", label: "Vanilla" },
-  ];
 
+  const { parks, getParks } = useContext(AppContext);
+
+  useEffect(() => {
+    getParks();
+  }, []);
+  
+  console.log(parks);
 
   return (
-    <div style={{ paddingBottom: "76px" }}>
-      <div className="container border my-5">
-        <div
-          className="text-center my-3"
-          style={{ fontWeight: "bolder", fontSize: "20px" }}
-        >
-          Park Details
-        </div>
-        <form className="my-5">
-          <div className="form-group my-5">
-            <label>Park Name</label>
-            <input
-              type="text"
-              className="form-control"
-              id="name"
-              placeholder="Name"
-            />
-          </div>
-          <div className="form-group my-5">
-            <label>City</label>
-            <input
-              type="text"
-              className="form-control"
-              id="city"
-              placeholder="City"
-            />
-          </div>
-          <div className="form-group my-5">
-            <label>State Name</label>
-            <input
-              type="text"
-              className="form-control"
-              id="state"
-              placeholder="State"
-            />
-          </div>
-          <div className="form-group my-5">
-            <label>Paste Image Link</label>
-            <input
-              type="text"
-              className="form-control"
-              id="image"
-              placeholder="Image-Link"
-            />
-          </div>
-          <div className="form-group my-5">
-            <label>About/Description</label>
-            <input
-              type="text"
-              className="form-control"
-              id="about"
-              placeholder="Enter the description of the park"
-            />
-          </div>
-          <div className="form-group my-5" style={{ textAlign: "center" }}>
-            <button className="btn btn-outline-primary">Save Activity</button>
-            &nbsp;&nbsp;
-            <button type="reset" className="btn btn-outline-danger">
-              Reset
-            </button>
-          </div>
-        </form>
-      </div>
+    <div>
+      <Carousel>
+        {[parks[0].image,parks[1].image,parks[2].image,parks[3].image,parks[4].image,parks[5].image].map((item) => {
+          return <Carousel.Item key={item}>{item}</Carousel.Item>;
+        })}
+      </Carousel>
     </div>
   );
 }

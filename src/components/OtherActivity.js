@@ -21,7 +21,7 @@ export default function OtherActivity(props) {
   const getOther = async (id1) => {
     {
       const response = await fetch(
-        `http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/activity-api/others/park/${id1}`,
+        `http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/activity-api/others/park/${id1}`,
         {
           method: "GET",
           mode: "cors",

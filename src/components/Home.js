@@ -2,8 +2,8 @@ import React from "react";
 import Intro from "./Intro";
 import Form from "./Form";
 import CarousalAnimals from "./CarousalAnimals";
-import CarouselFade from "./CarouselFade";
-import CarouselActivity from "./CarouselActivity";
+import CarouselParks from "./CarouselParks";
+import CarouselState from "./CarouselState";
 import { Row, Col } from "react-bootstrap";
 import logo from "../images/lush.jpg";
 import "../css/Home.css";
@@ -84,7 +84,7 @@ export default function Home() {
             Explore the National Parks
           </tr>
           <tr>
-            <CarouselFade></CarouselFade>
+            <CarouselParks></CarouselParks>
           </tr>
         </tbody>
       </table>
@@ -113,10 +113,10 @@ export default function Home() {
               fontSize: "25px",
             }}
           >
-            Enjoy your way with number of activities
+            Here! We made it easy for you.
           </tr>
           <tr>
-            <CarouselActivity></CarouselActivity>
+            <CarouselState></CarouselState>
           </tr>
         </tbody>
       </table>

@@ -218,8 +218,10 @@ export default function SafariForm(props) {
           <br />
           <div style={{ textAlign: "center" }}>
             <div>
-              Note: Only 6 people are allowed in the safari per gypsy and no
-              sharing is allowed. Kindly book accordingly
+              Note:<br/>
+              1. Only 6 people are allowed in the safari per gypsy and no
+              sharing is allowed. Kindly book accordingly.<br/>
+              2. Ride is free for kids under {safari.age}
             </div>
             <br />
             <br />

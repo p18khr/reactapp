@@ -12,31 +12,27 @@ export default function Blogs() {
 
   return (
     <div className="container my-5">
+      <div style={{fontWeight:'bold',fontSize:'30px',textAlign:'center'}}>Do you like blogs? Here!</div>
       <Row xs={1} md={1}>
         {blogs.map((idx) => (
           <Col>
-            <div className="card text-center my-3">
-              <div className="card-header">{idx.title}</div>
-              <div className="card-body">
-                <div className="card-title">
-                  <img src={idx.image} alt="" style={{maxHeight:'250px', maxWidth:'200px'}} />
-                </div>
-                <p className="card-text">{idx.content}</p>
-                <div className="card-footer">
-                  {/* <button className="btn btn-primary mx-2" data-toggle="modal" data-target="#exampleModal" onClick={()=>{getBlog(idx.id)}}>Edit</button>
-                  <button
-                    className="btn btn-danger mx-2"
-                    onClick={() => {
-                      deleteBlog(idx.id);
-                    }}
-                  >
-                    Delete
-                  </button> */}
-                  {/* <button className="btn btn-primary">Read More</button> */}
-                </div>
+            <a href={`/blogs/${idx.id}`} style={{textDecoration:'none',color:'black'}}>
+            <div className="card text-center my-5">
+              <div className="btn btn-primary disabled" style={{borderBottomLeftRadius:'0',borderBottomRightRadius:'0'}}>{idx.title}</div>
+              <div className="card-body" style={{height:'120px',overflow:'hidden'}}>
+                <Row>
+                  <Col>
+                  <img src={idx.image} alt="" style={{maxHeight:'80px', maxWidth:'100px'}} />
+                  </Col>
+                  <Col>
+                  {idx.content}
+                  </Col>
+                </Row>
+                 
               </div>
-              <div className="card-footer text-muted">{idx.timestamp}</div>
+              <div className="card-footer text-muted">..more</div>
             </div>
+            </a>
           </Col>
         ))}
       </Row>

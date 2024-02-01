@@ -20,7 +20,7 @@ export default function Safari(props) {
   const get = async (id) => {
     {
       const response = await fetch(
-        `http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/activity-api/safari/park/${id}`,
+        `http://nationalpark-env.eba-bzp82zrm.ap-south-1.elasticbeanstalk.com/activity-api/safari/park/${id}`,
         {
           method: "GET",
           mode: "cors",
@@ -104,7 +104,7 @@ export default function Safari(props) {
   return (
     <div>
       <Row xs={varXs} md={varMd} className="g-4">
-        <div hidden={safaris.length != 0}>No safaris available</div>
+        <div hidden={safaris.length != 0}>No safaris available!</div>
         {safaris.map((idx) => (
           <Col key={idx.id}>
             <div className="card card1 my-2">

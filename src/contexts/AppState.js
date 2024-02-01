@@ -32,7 +32,7 @@ const AppState = (props) => {
 
   //Get all Parks
   const getParks = async () => {
-    const response = await fetch("http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/park-api", {
+    const response = await fetch("http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/park-api", {
       method: "GET",
       mode: "cors",
       headers: {
@@ -45,7 +45,7 @@ const AppState = (props) => {
 
   //Get a park by id
   const getPark = async (id) => {
-    const response = await fetch(`http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/park-api/${id}`, {
+    const response = await fetch(`http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/park-api/${id}`, {
       method: "GET",
       mode: "cors",
       headers: {
@@ -58,7 +58,7 @@ const AppState = (props) => {
 
   // Filter a park by nearby city name, , getting city names only
   const getCity = async () => {
-    const response = await fetch("http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/park-api/city", {
+    const response = await fetch("http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/park-api/city", {
       method: "GET",
       mode: "cors",
       headers: {
@@ -71,7 +71,7 @@ const AppState = (props) => {
 
   // Filter a park by state name , getting state names only
   const getState = async () => {
-    const response = await fetch(`http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/park-api/state`, {
+    const response = await fetch(`http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/park-api/state`, {
       method: "GET",
       mode: "cors",
       headers: {
@@ -82,9 +82,35 @@ const AppState = (props) => {
     setState(json);
   };
 
+  const [statePark,setStatePark] = useState([]);
+  const getStatePark = async (state_name) => {
+    const response = await fetch(`http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/park-api/state/${state_name}`, {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const json = await response.json();
+    setStatePark(json);
+  };
+
+  const [animal,setAnimal] = useState([]);
+  const getAnimal = async (animal_name) => {
+    const response = await fetch(`http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/park-api/animal/${animal_name}`, {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const json = await response.json();
+    setAnimal(json);
+  };
+
   // Filter a park just by it's name, getting park names only
   const getParkName = async () => {
-    const response = await fetch(`http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/park-api/park`, {
+    const response = await fetch(`http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/park-api/park`, {
       method: "GET",
       mode: "cors",
       headers: {
@@ -102,7 +128,7 @@ const AppState = (props) => {
   const getAllActivities = async (park_id) => {
     {
       const response = await fetch(
-        `http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/activity-api/park/${park_id}`,
+        `http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/activity-api/park/${park_id}`,
         {
           method: "GET",
           mode: "cors",
@@ -120,7 +146,7 @@ const AppState = (props) => {
   const getActivityName = async () => {
     {
       const response = await fetch(
-        `http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/activity-api/name`,
+        `http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/activity-api/name`,
         {
           method: "GET",
           mode: "cors",
@@ -138,7 +164,7 @@ const AppState = (props) => {
   const getHotels = async (id) => {
     {
       const response = await fetch(
-        `http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/hotel-api/park/${id}`,
+        `http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/hotel-api/park/${id}`,
         {
           method: "GET",
           mode: "cors",
@@ -155,7 +181,7 @@ const AppState = (props) => {
   // get details of a hotel by id
   const getHotel = async (id) => {
     {
-      const response = await fetch(`http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/hotel-api/${id}`, {
+      const response = await fetch(`http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/hotel-api/${id}`, {
         method: "GET",
         mode: "cors",
         headers: {
@@ -171,7 +197,7 @@ const AppState = (props) => {
   const getHotelsorted = async (id) => {
     {
       const response = await fetch(
-        `http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/hotel-api/sort/${id}`,
+        `http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/hotel-api/sort/${id}`,
         {
           method: "GET",
           mode: "cors",
@@ -189,7 +215,7 @@ const AppState = (props) => {
   const getHotelreverse = async (id) => {
     {
       const response = await fetch(
-        `http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/hotel-api/reverse/${id}`,
+        `http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/hotel-api/reverse/${id}`,
         {
           method: "GET",
           mode: "cors",
@@ -207,7 +233,7 @@ const AppState = (props) => {
   const getSafaris = async (id) => {
     {
       const response = await fetch(
-        `http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/activity-api/safari/park/${id}`,
+        `http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/activity-api/safari/park/${id}`,
         {
           method: "GET",
           mode: "cors",
@@ -227,7 +253,7 @@ const AppState = (props) => {
   const getSafari = async (id) => {
     {
       const response = await fetch(
-        `http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/activity-api/${id}`,
+        `http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/activity-api/${id}`,
         {
           method: "GET",
           mode: "cors",
@@ -245,7 +271,7 @@ const AppState = (props) => {
   const getOtherActivity = async (id) => {
     {
       const response = await fetch(
-        `http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/activity-api/others/park/${id}`,
+        `http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/activity-api/others/park/${id}`,
         {
           method: "GET",
           mode: "cors",
@@ -263,7 +289,7 @@ const AppState = (props) => {
   const filter = async (activity_name,park_name,city,state) => {
     {
       const response = await fetch(
-        `http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/park-api/filter`,
+        `http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/park-api/filter`,
         {
           method: "POST",
           mode: "cors",
@@ -280,7 +306,7 @@ const AppState = (props) => {
 
  // posting a general enquiry from home page form
   const GeneralEnquiry = async (name,contact,email,city,adult,kid,check_in,check_out,days,park_id) => {
-    await fetch("http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/enquiry-api", {
+    await fetch("http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/enquiry-api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -290,7 +316,7 @@ const AppState = (props) => {
   };
 
   const HotelEnquiry = async (name,contact,email,city,adult,kid,check_in,check_out,days,park_id,room,safari,activity,estimate_package,hotel) => {
-    await fetch("http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/enquiry-api/hotel-enquiry", {
+    await fetch("http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/enquiry-api/hotel-enquiry", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -300,7 +326,7 @@ const AppState = (props) => {
   };
 
   const safariEnquiry = async (name,contact,email,city,adult,kid,visiting_date,park_id,gypsy,safari,activity,estimate_package) => {
-    await fetch("http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/enquiry-api/safari-enquiry", {
+    await fetch("http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/enquiry-api/safari-enquiry", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -312,7 +338,7 @@ const AppState = (props) => {
 
   const [blog,setBlog] = useState({});
   const getBlog = async (id) => {
-    const response = await fetch(`http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/blog-api/${id}`, {
+    const response = await fetch(`http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/blog-api/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -324,7 +350,7 @@ const AppState = (props) => {
 
   const [blogs,setBlogs] = useState([]);
   const getBlogs = async () => {
-    const response = await fetch(`http://nationalpark-api-env.eba-srqefrtw.ap-south-1.elasticbeanstalk.com/blog-api`, {
+    const response = await fetch(`http://gojunglee-env.eba-ckertdym.ap-south-1.elasticbeanstalk.com/blog-api`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -408,7 +434,11 @@ const AppState = (props) => {
         blog,
         getBlog,
         blogs,
-        getBlogs
+        getBlogs,
+        statePark,
+        getStatePark,
+        animal,
+        getAnimal
       }}
     >
       {props.children}

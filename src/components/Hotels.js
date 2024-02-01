@@ -54,7 +54,69 @@ export default function Hotels(props) {
       {hotels.map((idx) => (
         <Col key={idx.id}>
           <div className='card card1 my-2'>
-            <img className='image' src={idx.image} alt="" style={{height:'200px'}} />
+          <div
+                id={"carouselExampleControls"+idx.id}
+                className="carousel slide"
+                data-ride="carousel"
+              >
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <img className="d-block w-100" src={idx.image1} alt="First slide" style={{height:'200px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={idx.image2} alt="Second slide" style={{height:'200px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={idx.image3} alt="Third slide" style={{height:'200px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={idx.image4} alt="Fourth slide" style={{height:'200px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={idx.image5} alt="Fifth slide" style={{height:'200px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={idx.image6} alt="Sixth slide" style={{height:'200px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={idx.image7} alt="Seventh slide" style={{height:'200px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={idx.image8} alt="Eighth slide" style={{height:'200px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={idx.image9} alt="Ninth slide" style={{height:'200px',width:'150px'}} />
+                  </div>
+                  <div className="carousel-item">
+                    <img className="d-block w-100" src={idx.image10} alt="Tenth slide" style={{height:'200px',width:'150px'}} />
+                  </div>
+                </div>
+                <a
+                  className="carousel-control-prev"
+                  href={"#carouselExampleControls"+idx.id}
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    className="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="sr-only">Previous</span>
+                </a>
+                <a
+                  className="carousel-control-next"
+                  href={"#carouselExampleControls"+idx.id}
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    className="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="sr-only">Next</span>
+                </a>
+              </div>
+            {/* <img className='image' src={idx.image} alt="" style={{height:'200px'}} /> */}
             <div className='card-body' style={{height:'200px'}}>
               <div className='card-title' style={{color:'goldenrod'}}>{idx.name}</div>
               <div className='card-text text-center'>

@@ -25,9 +25,30 @@ export default function ParkForm(props) {
             <div className="card-title body" style={{ fontSize: "40px" }}>
               {park.name}
             </div>
-            <div className="card-text body">{park.city}, {park.state}, IND</div>
+            <div className="card-text body">
+              <img
+                    src="https://cdn-icons-png.flaticon.com/128/684/684908.png"
+                    alt=""
+                    style={{ height: "20px", width: "20px" }}
+                  />
+                  &nbsp;{park.city}, {park.state}
+                  <br /><br/>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/4353/4353032.png"
+                    alt=""
+                    style={{ height: "20px", width: "20px" }}
+                  />
+                  &nbsp;{park.airport}
+                  <br /><br/>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/2062/2062153.png"
+                    alt=""
+                    style={{ height: "20px", width: "20px" }}
+                  />&nbsp;{park.railway}</div>
             <div className="card-body body">
-              {park.about}
+              {park.about}<br/>
+              <img  />
+              <img  />
             </div>
           </div>
         </div>

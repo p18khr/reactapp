@@ -122,6 +122,7 @@ export default function AddSafariPassenger() {
               </tbody>
             </table>
             <div className="text-center">You have selected {rows.length} gypsy(ies).</div><br/><br/>
+            <div style={{color:'red'}}>Note: Kindly click on Save Rooms to save your rooms (if changed)</div><br/><br/>
             <button onClick={handleAddRow} className="btn btn-primary">
               Add Gypsy
             </button>
